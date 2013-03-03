@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ! Excerpted from "Hello, Android! 3e",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/eband3 for more book information.
+-->
+<resources>
+   <string-array name="lineWidthArray">
+      <item>thin</item>
+      <item>normal</item>
+      <item>phat</item>
+      <item>really phat</item>
+   </string-array>
+   
+   <string-array name="lineWidthValues">
+      <item>2</item>
+      <item>@string/default_linewidth</item>
+      <item>10</item>
+      <item>15</item>  
+   </string-array>
+</resources>

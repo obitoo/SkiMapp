@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"  >
+  
+    
+<PreferenceCategory 
+        android:title="Gps Settings"
+        android:key="gps">
+            
+	  <CheckBoxPreference
+			android:defaultValue="true"
+			android:key="enable_gps" 
+			android:persistent="true" 
+			android:title="Gps"
+			android:summary="Use GPS, if its enabled on your device"
+			android:disableDependentsState="false"/>
+	
+	  	<com.bullock.skimapp.SeekBarPreference
+		   android:dialogTitle="Min Update Interval" 
+		   android:title="Min Update Interval" 
+		   android:summary="Minimum time to wait for GPS updates. Larger values may improve battery life."  
+		   android:defaultValue="400" 
+		   android:key="gps_minGpsTime" 
+		   android:inputType="phone"
+		   android:negativeButtonText="Cancel" android:positiveButtonText="Ok" android:persistent="true" 
+		   android:dialogMessage="Enter interval in Seconds\n"
+           android:dependency="enable_gps"
+           
+           android:max="300"
+           android:text=" seconds"    />
+ 
+	  	    
+	  	    
+	  	<com.bullock.skimapp.SeekBarPreference
+		   android:dialogTitle="Min Update Distance" 
+		   android:title="Min Update Distance" 
+		   android:summary="Minimum distance moved before GPS updates. Larger values may improve battery life."  
+		   android:defaultValue="1" 
+		   android:key="gps_minGpsDistance" 
+		   android:inputType="phone"
+		   android:negativeButtonText="Cancel" android:positiveButtonText="Ok" android:persistent="true" 
+		   android:dialogMessage="Enter distance in Meters"
+		   android:dependency="enable_gps"
+		   android:max="500"
+           android:text=" metres" />
+ 
+	  	  <CheckBoxPreference
+			android:defaultValue="false"
+			android:key="enable_gps_debug" 
+			android:persistent="true" 
+			android:title="Debug"
+			android:summary="Display a pop-up each time a GPS update is received."
+			android:dependency="enable_gps"/>
+  </PreferenceCategory>
+     
+
+
+
+
+
+   <PreferenceCategory 
+        android:title="Compass Settings"
+        android:key="compass_settings">
+	  
+        <CheckBoxPreference
+			android:defaultValue="false"
+			android:key="enable_compass" 
+			android:persistent="true" 
+			android:title="Compass"
+			android:summary="Rotate the map to the direction you're facing."
+			android:disableDependentsState="false"/>
+        
+        <com.bullock.skimapp.SeekBarPreference
+            android:defaultValue="500"
+            android:key="compass_damping"
+            android:max="1000"
+            android:text=" ms"
+            android:summary="How often (ms) to update the map. Values lower than 100 disable animation, so will appear jerky. "
+            android:title="Damping"
+            android:dependency="enable_compass" />
+        
+   </PreferenceCategory>
+  
+  
+   
+  <PreferenceCategory 
+        android:title="Map type"
+        android:key="maptype">
+            
+		  <CheckBoxPreference
+				android:defaultValue="false"
+				android:key="maptype_terrain" 
+				android:persistent="true" 
+				android:title="Terrain"
+				android:summary="Terrain map instead of the regular Google map"/>
+		  
+		  
+		  <ListPreference
+                android:title="Line Width"
+                android:summary="How wide the ski run/lift lines appear on the map"
+                android:key="lineWidth"
+                android:defaultValue="5"
+                android:entries="@array/lineWidthArray"
+                android:entryValues="@array/lineWidthValues" />
+		      
+   </PreferenceCategory>
+   
+  
+
+
+</PreferenceScreen> 
