@@ -963,6 +963,7 @@ com.bullock.skimapp.SkiMapp -> com.bullock.skimapp.SkiMapp:
     void onStop() -> onStop
     void onPause() -> onPause
     void onResume() -> onResume
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
     void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected

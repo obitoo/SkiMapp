@@ -38317,11 +38317,13 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 75):
+Constant Pool (count = 82):
   + Integer [2130903041]
+  + String [Ooops, error inflating map view]
   + String [done, loading map]
   + Class [[Ljava/lang/String;]
   + Class [android/os/AsyncTask]
+  + Class [android/view/InflateException]
   + Class [com/bullock/skimapp/SkiMapp]
   + Class [com/bullock/skimapp/c]
   + Class [com/bullock/skimapp/e]
@@ -38332,6 +38334,7 @@ Constant Pool (count = 75):
   + Fieldref [com/bullock/skimapp/e.a Lcom/bullock/skimapp/SkiMapp;]
   + Fieldref [com/bullock/skimapp/e.b Lcom/bullock/skimapp/c;]
   + Methodref [android/os/AsyncTask.<init> ()V]
+  + Methodref [com/bullock/skimapp/SkiMapp.b (Ljava/lang/String;)V]
   + Methodref [com/bullock/skimapp/SkiMapp.f ()V]
   + Methodref [com/bullock/skimapp/SkiMapp.setContentView (I)V]
   + Methodref [com/bullock/skimapp/c.<init> (Lcom/bullock/skimapp/SkiMapp;)V]
@@ -38349,6 +38352,7 @@ Constant Pool (count = 75):
   + NameAndType [a (Ljava/lang/String;)V]
   + NameAndType [a ([Ljava/lang/String;)Ljava/lang/Integer;]
   + NameAndType [a Lcom/bullock/skimapp/SkiMapp;]
+  + NameAndType [b (Ljava/lang/String;)V]
   + NameAndType [b ([Ljava/lang/String;)V]
   + NameAndType [b Lcom/bullock/skimapp/c;]
   + NameAndType [f ()V]
@@ -38373,9 +38377,12 @@ Constant Pool (count = 75):
   + Utf8 [Lcom/bullock/skimapp/SkiMapp;]
   + Utf8 [Lcom/bullock/skimapp/c;]
   + Utf8 [Lcom/bullock/skimapp/f;]
+  + Utf8 [Ooops, error inflating map view]
+  + Utf8 [StackMapTable]
   + Utf8 [[Ljava/lang/String;]
   + Utf8 [a]
   + Utf8 [android/os/AsyncTask]
+  + Utf8 [android/view/InflateException]
   + Utf8 [b]
   + Utf8 [com/bullock/skimapp/SkiMapp]
   + Utf8 [com/bullock/skimapp/c]
@@ -38408,22 +38415,22 @@ Methods (count = 8):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 25, locals = 2, stack = 4):
       [0] aload_0 v0
-      [1] invokespecial #14
+      [1] invokespecial #16
         + Methodref [android/os/AsyncTask.<init> ()V]
       [4] aload_0 v0
       [5] aload_1 v1
-      [6] putfield #12
+      [6] putfield #14
         + Fieldref [com/bullock/skimapp/e.a Lcom/bullock/skimapp/SkiMapp;]
       [9] aload_0 v0
-      [10] new #6
+      [10] new #8
         + Class [com/bullock/skimapp/c]
       [13] dup
       [14] aload_0 v0
-      [15] getfield #12
+      [15] getfield #14
         + Fieldref [com/bullock/skimapp/e.a Lcom/bullock/skimapp/SkiMapp;]
-      [18] invokespecial #17
+      [18] invokespecial #20
         + Methodref [com/bullock/skimapp/c.<init> (Lcom/bullock/skimapp/SkiMapp;)V]
-      [21] putfield #13
+      [21] putfield #15
         + Fieldref [com/bullock/skimapp/e.b Lcom/bullock/skimapp/c;]
       [24] return
       Code attribute exceptions (count = 0):
@@ -38435,13 +38442,13 @@ Methods (count = 8):
     + Code attribute instructions (code length = 13, locals = 2, stack = 5):
       [0] aload_0 v0
       [1] iconst_1
-      [2] anewarray #10
+      [2] anewarray #12
         + Class [java/lang/String]
       [5] dup
       [6] iconst_0
       [7] aload_1 v1
       [8] aastore
-      [9] invokevirtual #22
+      [9] invokevirtual #25
         + Methodref [com/bullock/skimapp/e.publishProgress ([Ljava/lang/Object;)V]
       [12] return
       Code attribute exceptions (count = 0):
@@ -38452,13 +38459,13 @@ Methods (count = 8):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 13, locals = 2, stack = 2):
       [0] aload_0 v0
-      [1] getfield #13
+      [1] getfield #15
         + Fieldref [com/bullock/skimapp/e.b Lcom/bullock/skimapp/c;]
       [4] aload_0 v0
-      [5] invokevirtual #18
+      [5] invokevirtual #21
         + Methodref [com/bullock/skimapp/c.a (Lcom/bullock/skimapp/e;)V]
       [8] iconst_0
-      [9] invokestatic #24
+      [9] invokestatic #27
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [12] areturn
       Code attribute exceptions (count = 0):
@@ -38469,14 +38476,14 @@ Methods (count = 8):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 14, locals = 2, stack = 3):
       [0] aload_0 v0
-      [1] getfield #12
+      [1] getfield #14
         + Fieldref [com/bullock/skimapp/e.a Lcom/bullock/skimapp/SkiMapp;]
-      [4] getfield #11
+      [4] getfield #13
         + Fieldref [com/bullock/skimapp/SkiMapp.p Lcom/bullock/skimapp/f;]
       [7] aload_1 v1
       [8] iconst_0
       [9] aaload
-      [10] invokevirtual #23
+      [10] invokevirtual #26
         + Methodref [com/bullock/skimapp/f.a (Ljava/lang/String;)V]
       [13] return
       Code attribute exceptions (count = 0):
@@ -38485,31 +38492,45 @@ Methods (count = 8):
     Access flags: 0x4
       = protected void a(java.lang.Integer)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 29, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 42, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] getfield #12
+      [1] getfield #14
         + Fieldref [com/bullock/skimapp/e.a Lcom/bullock/skimapp/SkiMapp;]
-      [4] getfield #11
+      [4] getfield #13
         + Fieldref [com/bullock/skimapp/SkiMapp.p Lcom/bullock/skimapp/f;]
-      [7] ldc #2
+      [7] ldc #3
         + String [done, loading map]
-      [9] invokevirtual #23
+      [9] invokevirtual #26
         + Methodref [com/bullock/skimapp/f.a (Ljava/lang/String;)V]
       [12] aload_0 v0
-      [13] getfield #12
+      [13] getfield #14
         + Fieldref [com/bullock/skimapp/e.a Lcom/bullock/skimapp/SkiMapp;]
       [16] ldc #1
         + Integer [2130903041]
-      [18] invokevirtual #16
+      [18] invokevirtual #19
         + Methodref [com/bullock/skimapp/SkiMapp.setContentView (I)V]
       [21] aload_0 v0
-      [22] getfield #12
+      [22] getfield #14
         + Fieldref [com/bullock/skimapp/e.a Lcom/bullock/skimapp/SkiMapp;]
-      [25] invokevirtual #15
+      [25] invokevirtual #18
         + Methodref [com/bullock/skimapp/SkiMapp.f ()V]
-      [28] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
+      [28] goto +13 (target=41)
+      [31] astore_2 v2
+      [32] aload_0 v0
+      [33] getfield #14
+        + Fieldref [com/bullock/skimapp/e.a Lcom/bullock/skimapp/SkiMapp;]
+      [36] ldc #2
+        + String [Ooops, error inflating map view]
+      [38] invokevirtual #17
+        + Methodref [com/bullock/skimapp/SkiMapp.b (Ljava/lang/String;)V]
+      [41] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (12 -> 28: 31):
+      + Class [android/view/InflateException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [31] Var: ..., Stack: [a:android/view/InflateException]
+        - [41] Var: ..., Stack: (empty)
   + Method:       onPostExecute(Ljava/lang/Object;)V
     Access flags: 0x1004
       = protected synthetic void onPostExecute(java.lang.Object)
@@ -38517,9 +38538,9 @@ Methods (count = 8):
     + Code attribute instructions (code length = 9, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] checkcast #9
+      [2] checkcast #11
         + Class [java/lang/Integer]
-      [5] invokevirtual #19
+      [5] invokevirtual #22
         + Methodref [com/bullock/skimapp/e.a (Ljava/lang/Integer;)V]
       [8] return
       Code attribute exceptions (count = 0):
@@ -38531,9 +38552,9 @@ Methods (count = 8):
     + Code attribute instructions (code length = 9, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] checkcast #3
+      [2] checkcast #4
         + Class [[Ljava/lang/String;]
-      [5] invokevirtual #20
+      [5] invokevirtual #23
         + Methodref [com/bullock/skimapp/e.a ([Ljava/lang/String;)Ljava/lang/Integer;]
       [8] areturn
       Code attribute exceptions (count = 0):
@@ -38545,9 +38566,9 @@ Methods (count = 8):
     + Code attribute instructions (code length = 9, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] checkcast #3
+      [2] checkcast #4
         + Class [[Ljava/lang/String;]
-      [5] invokevirtual #21
+      [5] invokevirtual #24
         + Methodref [com/bullock/skimapp/e.b ([Ljava/lang/String;)V]
       [8] return
       Code attribute exceptions (count = 0):
@@ -39810,7 +39831,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [android/content/SharedPreferences$OnSharedPreferenceChangeListener]
 
-Constant Pool (count = 356):
+Constant Pool (count = 360):
   + Integer [16908299]
   + Integer [2130903043]
   + Integer [2131099653]
@@ -39866,6 +39887,7 @@ Constant Pool (count = 356):
   + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
   + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
   + Methodref [android/support/v4/app/h.<init> ()V]
+  + Methodref [android/support/v4/app/h.onConfigurationChanged (Landroid/content/res/Configuration;)V]
   + Methodref [android/support/v4/app/h.onCreate (Landroid/os/Bundle;)V]
   + Methodref [android/support/v4/app/h.onCreateOptionsMenu (Landroid/view/Menu;)Z]
   + Methodref [android/support/v4/app/h.onPause ()V]
@@ -40007,6 +40029,7 @@ Constant Pool (count = 356):
   + NameAndType [n Lcom/google/android/gms/maps/c;]
   + NameAndType [next ()Ljava/lang/Object;]
   + NameAndType [o Ljava/util/ArrayList;]
+  + NameAndType [onConfigurationChanged (Landroid/content/res/Configuration;)V]
   + NameAndType [onCreate (Landroid/os/Bundle;)V]
   + NameAndType [onCreateOptionsMenu (Landroid/view/Menu;)Z]
   + NameAndType [onPause ()V]
@@ -40057,6 +40080,7 @@ Constant Pool (count = 356):
   + Utf8 [(Landroid/content/Intent;)V]
   + Utf8 [(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V]
   + Utf8 [(Landroid/content/SharedPreferences;Ljava/lang/String;)V]
+  + Utf8 [(Landroid/content/res/Configuration;)V]
   + Utf8 [(Landroid/os/Bundle;)V]
   + Utf8 [(Landroid/view/Menu;)Z]
   + Utf8 [(Landroid/view/MenuItem;)Z]
@@ -40148,6 +40172,7 @@ Constant Pool (count = 356):
   + Utf8 [n]
   + Utf8 [next]
   + Utf8 [o]
+  + Utf8 [onConfigurationChanged]
   + Utf8 [onCreate]
   + Utf8 [onCreateOptionsMenu]
   + Utf8 [onOptionsItemSelected]
@@ -40190,7 +40215,7 @@ Fields (count = 7):
     Access flags: 0x2
       = private android.content.SharedPreferences t
 
-Methods (count = 14):
+Methods (count = 15):
   - Method:       <init>()V
     Access flags: 0x1
       = public SkiMapp()
@@ -40217,12 +40242,12 @@ Methods (count = 14):
     + Code attribute instructions (code length = 147, locals = 2, stack = 5):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #56
+      [2] invokespecial #57
         + Methodref [android/support/v4/app/h.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #2
         + Integer [2130903043]
-      [8] invokevirtual #78
+      [8] invokevirtual #79
         + Methodref [com/bullock/skimapp/SkiMapp.setContentView (I)V]
       [11] aload_0 v0
       [12] getfield #45
@@ -40232,7 +40257,7 @@ Methods (count = 14):
       [19] new #42
         + Class [java/util/ArrayList]
       [22] dup
-      [23] invokespecial #126
+      [23] invokespecial #127
         + Methodref [java/util/ArrayList.<init> ()V]
       [26] putfield #45
         + Fieldref [com/bullock/skimapp/SkiMapp.o Ljava/util/ArrayList;]
@@ -40244,7 +40269,7 @@ Methods (count = 14):
       [37] new #42
         + Class [java/util/ArrayList]
       [40] dup
-      [41] invokespecial #126
+      [41] invokespecial #127
         + Methodref [java/util/ArrayList.<init> ()V]
       [44] putfield #47
         + Fieldref [com/bullock/skimapp/SkiMapp.q Ljava/util/ArrayList;]
@@ -40254,7 +40279,7 @@ Methods (count = 14):
       [51] dup
       [52] aload_0 v0
       [53] iconst_4
-      [54] invokespecial #91
+      [54] invokespecial #92
         + Methodref [com/bullock/skimapp/f.<init> (Landroid/app/Activity;I)V]
       [57] putfield #46
         + Fieldref [com/bullock/skimapp/SkiMapp.p Lcom/bullock/skimapp/f;]
@@ -40262,7 +40287,7 @@ Methods (count = 14):
         + Class [com/bullock/skimapp/e]
       [63] dup
       [64] aload_0 v0
-      [65] invokespecial #89
+      [65] invokespecial #90
         + Methodref [com/bullock/skimapp/e.<init> (Lcom/bullock/skimapp/SkiMapp;)V]
       [68] iconst_3
       [69] anewarray #41
@@ -40281,7 +40306,7 @@ Methods (count = 14):
       [83] iconst_2
       [84] aconst_null
       [85] aastore
-      [86] invokevirtual #90
+      [86] invokevirtual #91
         + Methodref [com/bullock/skimapp/e.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
       [89] pop
       [90] aload_0 v0
@@ -40289,14 +40314,14 @@ Methods (count = 14):
         + Class [com/bullock/skimapp/d]
       [94] dup
       [95] aload_0 v0
-      [96] invokespecial #85
+      [96] invokespecial #86
         + Methodref [com/bullock/skimapp/d.<init> (Lcom/bullock/skimapp/SkiMapp;)V]
       [99] putfield #48
         + Fieldref [com/bullock/skimapp/SkiMapp.r Lcom/bullock/skimapp/d;]
       [102] aload_0 v0
       [103] getfield #48
         + Fieldref [com/bullock/skimapp/SkiMapp.r Lcom/bullock/skimapp/d;]
-      [106] invokevirtual #88
+      [106] invokevirtual #89
         + Methodref [com/bullock/skimapp/d.c ()V]
       [109] aload_0 v0
       [110] aload_0 v0
@@ -40308,21 +40333,21 @@ Methods (count = 14):
       [118] getfield #50
         + Fieldref [com/bullock/skimapp/SkiMapp.t Landroid/content/SharedPreferences;]
       [121] aload_0 v0
-      [122] invokeinterface #129
+      [122] invokeinterface #130
         + InterfaceMethodref [android/content/SharedPreferences.registerOnSharedPreferenceChangeListener (Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V]
       [127] aload_0 v0
       [128] new #27
         + Class [com/bullock/skimapp/a]
       [131] dup
       [132] aload_0 v0
-      [133] invokespecial #80
+      [133] invokespecial #81
         + Methodref [com/bullock/skimapp/a.<init> (Lcom/bullock/skimapp/SkiMapp;)V]
       [136] putfield #49
         + Fieldref [com/bullock/skimapp/SkiMapp.s Lcom/bullock/skimapp/a;]
       [139] aload_0 v0
       [140] getfield #49
         + Fieldref [com/bullock/skimapp/SkiMapp.s Lcom/bullock/skimapp/a;]
-      [143] invokevirtual #84
+      [143] invokevirtual #85
         + Methodref [com/bullock/skimapp/a.c ()V]
       [146] return
       Code attribute exceptions (count = 0):
@@ -40338,10 +40363,10 @@ Methods (count = 14):
       [0] aload_0 v0
       [1] getfield #49
         + Fieldref [com/bullock/skimapp/SkiMapp.s Lcom/bullock/skimapp/a;]
-      [4] invokevirtual #81
+      [4] invokevirtual #82
         + Methodref [com/bullock/skimapp/a.a ()V]
       [7] aload_0 v0
-      [8] invokespecial #60
+      [8] invokespecial #61
         + Methodref [android/support/v4/app/h.onStop ()V]
       [11] return
       Code attribute exceptions (count = 0):
@@ -40352,12 +40377,12 @@ Methods (count = 14):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 12, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #58
+      [1] invokespecial #59
         + Methodref [android/support/v4/app/h.onPause ()V]
       [4] aload_0 v0
       [5] getfield #48
         + Fieldref [com/bullock/skimapp/SkiMapp.r Lcom/bullock/skimapp/d;]
-      [8] invokevirtual #86
+      [8] invokevirtual #87
         + Methodref [com/bullock/skimapp/d.a ()V]
       [11] return
       Code attribute exceptions (count = 0):
@@ -40368,19 +40393,31 @@ Methods (count = 14):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 19, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #59
+      [1] invokespecial #60
         + Methodref [android/support/v4/app/h.onResume ()V]
       [4] aload_0 v0
       [5] getfield #48
         + Fieldref [com/bullock/skimapp/SkiMapp.r Lcom/bullock/skimapp/d;]
-      [8] invokevirtual #87
+      [8] invokevirtual #88
         + Methodref [com/bullock/skimapp/d.b ()V]
       [11] aload_0 v0
       [12] getfield #49
         + Fieldref [com/bullock/skimapp/SkiMapp.s Lcom/bullock/skimapp/a;]
-      [15] invokevirtual #83
+      [15] invokevirtual #84
         + Methodref [com/bullock/skimapp/a.b ()V]
       [18] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onConfigurationChanged(Landroid/content/res/Configuration;)V
+    Access flags: 0x1
+      = public void onConfigurationChanged(android.content.res.Configuration)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 6, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #56
+        + Methodref [android/support/v4/app/h.onConfigurationChanged (Landroid/content/res/Configuration;)V]
+      [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
@@ -40391,64 +40428,64 @@ Methods (count = 14):
       [0] aload_2 v2
       [1] ldc #9
         + String [enable_gps]
-      [3] invokevirtual #125
+      [3] invokevirtual #126
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [6] ifeq +10 (target=16)
       [9] aload_0 v0
       [10] getfield #48
         + Fieldref [com/bullock/skimapp/SkiMapp.r Lcom/bullock/skimapp/d;]
-      [13] invokevirtual #88
+      [13] invokevirtual #89
         + Methodref [com/bullock/skimapp/d.c ()V]
       [16] aload_2 v2
       [17] ldc #8
         + String [enable_compass]
-      [19] invokevirtual #125
+      [19] invokevirtual #126
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [22] ifeq +36 (target=58)
       [25] aload_0 v0
-      [26] invokevirtual #75
+      [26] invokevirtual #76
         + Methodref [com/bullock/skimapp/SkiMapp.getBaseContext ()Landroid/content/Context;]
-      [29] invokestatic #68
+      [29] invokestatic #69
         + Methodref [com/bullock/skimapp/Prefs.e (Landroid/content/Context;)Z]
       [32] ifeq +19 (target=51)
       [35] aload_0 v0
       [36] ldc #6
         + String [Compass tracking enabled - make sure your compass is calibrated (Hold device flat and slowly rotate 2 times)]
-      [38] invokevirtual #72
+      [38] invokevirtual #73
         + Methodref [com/bullock/skimapp/SkiMapp.c (Ljava/lang/String;)V]
       [41] aload_0 v0
       [42] getfield #49
         + Fieldref [com/bullock/skimapp/SkiMapp.s Lcom/bullock/skimapp/a;]
-      [45] invokevirtual #84
+      [45] invokevirtual #85
         + Methodref [com/bullock/skimapp/a.c ()V]
       [48] goto +10 (target=58)
       [51] aload_0 v0
       [52] getfield #49
         + Fieldref [com/bullock/skimapp/SkiMapp.s Lcom/bullock/skimapp/a;]
-      [55] invokevirtual #81
+      [55] invokevirtual #82
         + Methodref [com/bullock/skimapp/a.a ()V]
       [58] aload_2 v2
       [59] ldc #7
         + String [compass_damping]
-      [61] invokevirtual #125
+      [61] invokevirtual #126
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [64] ifeq +20 (target=84)
       [67] aload_0 v0
       [68] getfield #49
         + Fieldref [com/bullock/skimapp/SkiMapp.s Lcom/bullock/skimapp/a;]
       [71] aload_0 v0
-      [72] invokevirtual #75
+      [72] invokevirtual #76
         + Methodref [com/bullock/skimapp/SkiMapp.getBaseContext ()Landroid/content/Context;]
-      [75] invokestatic #69
+      [75] invokestatic #70
         + Methodref [com/bullock/skimapp/Prefs.f (Landroid/content/Context;)Ljava/lang/Integer;]
-      [78] invokevirtual #124
+      [78] invokevirtual #125
         + Methodref [java/lang/Integer.intValue ()I]
-      [81] invokevirtual #82
+      [81] invokevirtual #83
         + Methodref [com/bullock/skimapp/a.a (I)V]
       [84] aload_2 v2
       [85] ldc #11
         + String [maptype_terrain]
-      [87] invokevirtual #125
+      [87] invokevirtual #126
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [90] ifeq +39 (target=129)
       [93] aload_0 v0
@@ -40456,28 +40493,28 @@ Methods (count = 14):
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
       [97] ifnull +32 (target=129)
       [100] aload_0 v0
-      [101] invokevirtual #75
+      [101] invokevirtual #76
         + Methodref [com/bullock/skimapp/SkiMapp.getBaseContext ()Landroid/content/Context;]
-      [104] invokestatic #70
+      [104] invokestatic #71
         + Methodref [com/bullock/skimapp/Prefs.g (Landroid/content/Context;)Z]
       [107] ifeq +14 (target=121)
       [110] aload_0 v0
       [111] getfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
       [114] iconst_3
-      [115] invokevirtual #101
+      [115] invokevirtual #102
         + Methodref [com/google/android/gms/maps/c.a (I)V]
       [118] goto +11 (target=129)
       [121] aload_0 v0
       [122] getfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
       [125] iconst_1
-      [126] invokevirtual #101
+      [126] invokevirtual #102
         + Methodref [com/google/android/gms/maps/c.a (I)V]
       [129] aload_2 v2
       [130] ldc #10
         + String [lineWidth]
-      [132] invokevirtual #125
+      [132] invokevirtual #126
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [135] ifeq +51 (target=186)
       [138] aload_0 v0
@@ -40487,24 +40524,24 @@ Methods (count = 14):
       [145] aload_0 v0
       [146] getfield #47
         + Fieldref [com/bullock/skimapp/SkiMapp.q Ljava/util/ArrayList;]
-      [149] invokevirtual #128
+      [149] invokevirtual #129
         + Methodref [java/util/ArrayList.iterator ()Ljava/util/Iterator;]
       [152] astore v4
       [154] goto +22 (target=176)
       [157] aload v4
-      [159] invokeinterface #132
+      [159] invokeinterface #133
         + InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
       [164] checkcast #39
         + Class [com/google/android/gms/maps/model/k]
       [167] astore_3 v3
       [168] aload_3 v3
       [169] aload_0 v0
-      [170] invokestatic #71
+      [170] invokestatic #72
         + Methodref [com/bullock/skimapp/Prefs.h (Landroid/content/Context;)F]
-      [173] invokevirtual #123
+      [173] invokevirtual #124
         + Methodref [com/google/android/gms/maps/model/k.a (F)V]
       [176] aload v4
-      [178] invokeinterface #131
+      [178] invokeinterface #132
         + InterfaceMethodref [java/util/Iterator.hasNext ()Z]
       [183] ifne -26 (target=157)
       [186] return
@@ -40527,18 +40564,18 @@ Methods (count = 14):
     + Code attribute instructions (code length = 20, locals = 3, stack = 3):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #57
+      [2] invokespecial #58
         + Methodref [android/support/v4/app/h.onCreateOptionsMenu (Landroid/view/Menu;)Z]
       [5] pop
       [6] aload_0 v0
-      [7] invokevirtual #76
+      [7] invokevirtual #77
         + Methodref [com/bullock/skimapp/SkiMapp.getMenuInflater ()Landroid/view/MenuInflater;]
       [10] astore_2 v2
       [11] aload_2 v2
       [12] ldc #4
         + Integer [2131427329]
       [14] aload_1 v1
-      [15] invokevirtual #62
+      [15] invokevirtual #63
         + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
       [18] iconst_1
       [19] ireturn
@@ -40550,7 +40587,7 @@ Methods (count = 14):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 70, locals = 3, stack = 5):
       [0] aload_1 v1
-      [1] invokeinterface #130
+      [1] invokeinterface #131
         + InterfaceMethodref [android/view/MenuItem.getItemId ()I]
       [6] tableswitch (3 offsets, default=62) (target=68)
         2131099659: offset = 26, target = 32
@@ -40566,7 +40603,7 @@ Methods (count = 14):
         + Class [com/bullock/skimapp/Prefs]
       [40] invokespecial #53
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-      [43] invokevirtual #79
+      [43] invokevirtual #80
         + Methodref [com/bullock/skimapp/SkiMapp.startActivity (Landroid/content/Intent;)V]
       [46] iconst_1
       [47] ireturn
@@ -40583,7 +40620,7 @@ Methods (count = 14):
       [60] astore_2 v2
       [61] aload_0 v0
       [62] aload_2 v2
-      [63] invokevirtual #79
+      [63] invokevirtual #80
         + Methodref [com/bullock/skimapp/SkiMapp.startActivity (Landroid/content/Intent;)V]
       [66] iconst_1
       [67] ireturn
@@ -40607,15 +40644,15 @@ Methods (count = 14):
       [4] ifnonnull +69 (target=73)
       [7] aload_0 v0
       [8] aload_0 v0
-      [9] invokevirtual #73
+      [9] invokevirtual #74
         + Methodref [com/bullock/skimapp/SkiMapp.e ()Landroid/support/v4/app/n;]
       [12] ldc #3
         + Integer [2131099653]
-      [14] invokevirtual #61
+      [14] invokevirtual #62
         + Methodref [android/support/v4/app/n.a (I)Landroid/support/v4/app/Fragment;]
       [17] checkcast #32
         + Class [com/google/android/gms/maps/SupportMapFragment]
-      [20] invokevirtual #99
+      [20] invokevirtual #100
         + Methodref [com/google/android/gms/maps/SupportMapFragment.y ()Lcom/google/android/gms/maps/c;]
       [23] putfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
@@ -40624,31 +40661,31 @@ Methods (count = 14):
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
       [30] ifnull +43 (target=73)
       [33] aload_0 v0
-      [34] invokevirtual #75
+      [34] invokevirtual #76
         + Methodref [com/bullock/skimapp/SkiMapp.getBaseContext ()Landroid/content/Context;]
-      [37] invokestatic #67
+      [37] invokestatic #68
         + Methodref [com/bullock/skimapp/Prefs.a (Landroid/content/Context;)Z]
       [40] ifeq +11 (target=51)
       [43] aload_0 v0
       [44] getfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
       [47] iconst_1
-      [48] invokevirtual #105
+      [48] invokevirtual #106
         + Methodref [com/google/android/gms/maps/c.a (Z)V]
       [51] aload_0 v0
-      [52] invokevirtual #75
+      [52] invokevirtual #76
         + Methodref [com/bullock/skimapp/SkiMapp.getBaseContext ()Landroid/content/Context;]
-      [55] invokestatic #70
+      [55] invokestatic #71
         + Methodref [com/bullock/skimapp/Prefs.g (Landroid/content/Context;)Z]
       [58] ifeq +11 (target=69)
       [61] aload_0 v0
       [62] getfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
       [65] iconst_3
-      [66] invokevirtual #101
+      [66] invokevirtual #102
         + Methodref [com/google/android/gms/maps/c.a (I)V]
       [69] aload_0 v0
-      [70] invokespecial #74
+      [70] invokespecial #75
         + Methodref [com/bullock/skimapp/SkiMapp.g ()V]
       [73] return
       Code attribute exceptions (count = 0):
@@ -40663,7 +40700,7 @@ Methods (count = 14):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #77
+      [1] invokespecial #78
         + Methodref [com/bullock/skimapp/SkiMapp.h ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -40676,30 +40713,30 @@ Methods (count = 14):
       [0] new #38
         + Class [com/google/android/gms/maps/model/c]
       [3] dup
-      [4] invokespecial #118
+      [4] invokespecial #119
         + Methodref [com/google/android/gms/maps/model/c.<init> ()V]
       [7] aload_0 v0
       [8] getfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
-      [11] invokevirtual #106
+      [11] invokevirtual #107
         + Methodref [com/google/android/gms/maps/c.b ()Lcom/google/android/gms/maps/model/CameraPosition;]
       [14] getfield #51
         + Fieldref [com/google/android/gms/maps/model/CameraPosition.b Lcom/google/android/gms/maps/model/LatLng;]
-      [17] invokevirtual #121
+      [17] invokevirtual #122
         + Methodref [com/google/android/gms/maps/model/c.a (Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/c;]
       [20] aload_0 v0
       [21] getfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
-      [24] invokevirtual #106
+      [24] invokevirtual #107
         + Methodref [com/google/android/gms/maps/c.b ()Lcom/google/android/gms/maps/model/CameraPosition;]
       [27] getfield #52
         + Fieldref [com/google/android/gms/maps/model/CameraPosition.c F]
-      [30] invokevirtual #120
+      [30] invokevirtual #121
         + Methodref [com/google/android/gms/maps/model/c.a (F)Lcom/google/android/gms/maps/model/c;]
       [33] fload_1 v1
-      [34] invokevirtual #122
+      [34] invokevirtual #123
         + Methodref [com/google/android/gms/maps/model/c.c (F)Lcom/google/android/gms/maps/model/c;]
-      [37] invokevirtual #119
+      [37] invokevirtual #120
         + Methodref [com/google/android/gms/maps/model/c.a ()Lcom/google/android/gms/maps/model/CameraPosition;]
       [40] astore_3 v3
       [41] iload_2 v2
@@ -40708,18 +40745,18 @@ Methods (count = 14):
       [46] getfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
       [49] aload_3 v3
-      [50] invokestatic #100
+      [50] invokestatic #101
         + Methodref [com/google/android/gms/maps/b.a (Lcom/google/android/gms/maps/model/CameraPosition;)Lcom/google/android/gms/maps/a;]
-      [53] invokevirtual #107
+      [53] invokevirtual #108
         + Methodref [com/google/android/gms/maps/c.b (Lcom/google/android/gms/maps/a;)V]
       [56] goto +14 (target=70)
       [59] aload_0 v0
       [60] getfield #44
         + Fieldref [com/bullock/skimapp/SkiMapp.n Lcom/google/android/gms/maps/c;]
       [63] aload_3 v3
-      [64] invokestatic #100
+      [64] invokestatic #101
         + Methodref [com/google/android/gms/maps/b.a (Lcom/google/android/gms/maps/model/CameraPosition;)Lcom/google/android/gms/maps/a;]
-      [67] invokevirtual #102
+      [67] invokevirtual #103
         + Methodref [com/google/android/gms/maps/c.a (Lcom/google/android/gms/maps/a;)V]
       [70] return
       Code attribute exceptions (count = 0):
@@ -40735,12 +40772,12 @@ Methods (count = 14):
       [0] aload_0 v0
       [1] getfield #45
         + Fieldref [com/bullock/skimapp/SkiMapp.o Ljava/util/ArrayList;]
-      [4] invokevirtual #128
+      [4] invokevirtual #129
         + Methodref [java/util/ArrayList.iterator ()Ljava/util/Iterator;]
       [7] astore_3 v3
       [8] goto +112 (target=120)
       [11] aload_3 v3
-      [12] invokeinterface #132
+      [12] invokeinterface #133
         + InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
       [17] checkcast #31
         + Class [com/bullock/skimapp/g]
@@ -40751,35 +40788,35 @@ Methods (count = 14):
       [25] new #37
         + Class [com/google/android/gms/maps/model/PolylineOptions]
       [28] dup
-      [29] invokespecial #114
+      [29] invokespecial #115
         + Methodref [com/google/android/gms/maps/model/PolylineOptions.<init> ()V]
       [32] aload_2 v2
-      [33] invokevirtual #93
+      [33] invokevirtual #94
         + Methodref [com/bullock/skimapp/g.b ()Ljava/util/ArrayList;]
-      [36] invokevirtual #117
+      [36] invokevirtual #118
         + Methodref [com/google/android/gms/maps/model/PolylineOptions.a (Ljava/lang/Iterable;)Lcom/google/android/gms/maps/model/PolylineOptions;]
       [39] aload_2 v2
-      [40] invokevirtual #96
+      [40] invokevirtual #97
         + Methodref [com/bullock/skimapp/g.e ()I]
-      [43] invokevirtual #116
+      [43] invokevirtual #117
         + Methodref [com/google/android/gms/maps/model/PolylineOptions.a (I)Lcom/google/android/gms/maps/model/PolylineOptions;]
       [46] aload_0 v0
-      [47] invokestatic #71
+      [47] invokestatic #72
         + Methodref [com/bullock/skimapp/Prefs.h (Landroid/content/Context;)F]
-      [50] invokevirtual #115
+      [50] invokevirtual #116
         + Methodref [com/google/android/gms/maps/model/PolylineOptions.a (F)Lcom/google/android/gms/maps/model/PolylineOptions;]
-      [53] invokevirtual #104
+      [53] invokevirtual #105
         + Methodref [com/google/android/gms/maps/c.a (Lcom/google/android/gms/maps/model/PolylineOptions;)Lcom/google/android/gms/maps/model/k;]
       [56] astore_1 v1
       [57] aload_0 v0
       [58] getfield #47
         + Fieldref [com/bullock/skimapp/SkiMapp.q Ljava/util/ArrayList;]
       [61] aload_1 v1
-      [62] invokevirtual #127
+      [62] invokevirtual #128
         + Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
       [65] pop
       [66] aload_2 v2
-      [67] invokevirtual #94
+      [67] invokevirtual #95
         + Methodref [com/bullock/skimapp/g.c ()Z]
       [70] ifeq +50 (target=120)
       [73] aload_0 v0
@@ -40788,36 +40825,36 @@ Methods (count = 14):
       [77] new #36
         + Class [com/google/android/gms/maps/model/MarkerOptions]
       [80] dup
-      [81] invokespecial #108
+      [81] invokespecial #109
         + Methodref [com/google/android/gms/maps/model/MarkerOptions.<init> ()V]
       [84] aload_2 v2
-      [85] invokevirtual #95
+      [85] invokevirtual #96
         + Methodref [com/bullock/skimapp/g.d ()Lcom/google/android/gms/maps/model/LatLng;]
-      [88] invokevirtual #109
+      [88] invokevirtual #110
         + Methodref [com/google/android/gms/maps/model/MarkerOptions.a (Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/MarkerOptions;]
       [91] aload_2 v2
-      [92] invokevirtual #92
+      [92] invokevirtual #93
         + Methodref [com/bullock/skimapp/g.a ()Ljava/lang/String;]
-      [95] invokevirtual #111
+      [95] invokevirtual #112
         + Methodref [com/google/android/gms/maps/model/MarkerOptions.a (Ljava/lang/String;)Lcom/google/android/gms/maps/model/MarkerOptions;]
       [98] aload_2 v2
-      [99] invokevirtual #98
+      [99] invokevirtual #99
         + Methodref [com/bullock/skimapp/g.g ()Ljava/lang/String;]
-      [102] invokevirtual #113
+      [102] invokevirtual #114
         + Methodref [com/google/android/gms/maps/model/MarkerOptions.b (Ljava/lang/String;)Lcom/google/android/gms/maps/model/MarkerOptions;]
       [105] aload_2 v2
-      [106] invokevirtual #97
+      [106] invokevirtual #98
         + Methodref [com/bullock/skimapp/g.f ()Lcom/google/android/gms/maps/model/a;]
-      [109] invokevirtual #110
+      [109] invokevirtual #111
         + Methodref [com/google/android/gms/maps/model/MarkerOptions.a (Lcom/google/android/gms/maps/model/a;)Lcom/google/android/gms/maps/model/MarkerOptions;]
       [112] iconst_1
-      [113] invokevirtual #112
+      [113] invokevirtual #113
         + Methodref [com/google/android/gms/maps/model/MarkerOptions.a (Z)Lcom/google/android/gms/maps/model/MarkerOptions;]
-      [116] invokevirtual #103
+      [116] invokevirtual #104
         + Methodref [com/google/android/gms/maps/c.a (Lcom/google/android/gms/maps/model/MarkerOptions;)Lcom/google/android/gms/maps/model/h;]
       [119] pop
       [120] aload_3 v3
-      [121] invokeinterface #131
+      [121] invokeinterface #132
         + InterfaceMethodref [java/util/Iterator.hasNext ()Z]
       [126] ifne -115 (target=11)
       [129] return
@@ -40834,21 +40871,21 @@ Methods (count = 14):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] iconst_0
-      [3] invokestatic #65
+      [3] invokestatic #66
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
       [6] astore_2 v2
       [7] aload_2 v2
-      [8] invokevirtual #64
+      [8] invokevirtual #65
         + Methodref [android/widget/Toast.getView ()Landroid/view/View;]
       [11] ldc #1
         + Integer [16908299]
-      [13] invokevirtual #63
+      [13] invokevirtual #64
         + Methodref [android/view/View.findViewById (I)Landroid/view/View;]
       [16] checkcast #22
         + Class [android/widget/TextView]
       [19] astore_3 v3
       [20] aload_2 v2
-      [21] invokevirtual #66
+      [21] invokevirtual #67
         + Methodref [android/widget/Toast.show ()V]
       [24] return
       Code attribute exceptions (count = 0):
@@ -40861,21 +40898,21 @@ Methods (count = 14):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] iconst_1
-      [3] invokestatic #65
+      [3] invokestatic #66
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
       [6] astore_2 v2
       [7] aload_2 v2
-      [8] invokevirtual #64
+      [8] invokevirtual #65
         + Methodref [android/widget/Toast.getView ()Landroid/view/View;]
       [11] ldc #1
         + Integer [16908299]
-      [13] invokevirtual #63
+      [13] invokevirtual #64
         + Methodref [android/view/View.findViewById (I)Landroid/view/View;]
       [16] checkcast #22
         + Class [android/widget/TextView]
       [19] astore_3 v3
       [20] aload_2 v2
-      [21] invokevirtual #66
+      [21] invokevirtual #67
         + Methodref [android/widget/Toast.show ()V]
       [24] return
       Code attribute exceptions (count = 0):

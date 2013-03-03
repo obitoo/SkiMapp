@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bullock.skimapp"
-    android:versionCode="1"
+    android:versionCode="2"
 
-    android:versionName="1.0"
+    android:versionName="1.1"
     android:installLocation="auto" >
 
     <uses-sdk
@@ -69,7 +69,10 @@
                     
         <meta-data
            android:name="com.google.android.maps.v2.API_KEY"
-           android:value="AIzaSyAfUeqB3X5wW7F2UotmaebF1betAadkutk"/>
+           android:value="AIzaSyCwQ-Lx8mdgeLjj_GwVClqlwJeY1_DwxhQ"/>
+        
+        <!-- debug key AIzaSyAfUeqB3X5wW7F2UotmaebF1betAadkutk -->        
+        
     </application>
 
 </manifest>
